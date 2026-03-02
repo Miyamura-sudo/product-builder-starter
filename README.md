@@ -1,16 +1,16 @@
 # Product Builder Starter Pack
 
-**11 Claude Code skills for product builders shipping with AI**
+**11 skills for product builders shipping with AI**
 
-A curated collection of Claude Code skills for product builders and first-time agentic engineers. Install these skills to go from a blank Claude Code session to a full planning-to-execution workflow in minutes.
+A curated collection of skills for agentic frameworks such as Claude Code. Install these skills to go from a blank session to a full planning-to-execution workflow in minutes.
 
 ---
 
 ## Who It's For
 
-You're a product builder who has started using Claude Code. You can see the power, but getting from "chat with an AI" to "ship production features with an AI agent" requires knowing which skills to install and in what order. This starter pack gives you that foundation:
+You're a product builder who has started using an agentic framework. You can see the power, but getting from "chat with an AI" to "ship production features with an AI agent" requires knowing which skills to install and in what order. This starter pack gives you that foundation:
 
-- You have Claude Code installed and a project you're working on
+- You have an agentic framework installed and a project you're working on
 - You use **Linear** for issue tracking
 - You want to use Claude for planning, code reviews, and executing work across your team
 - You want secrets handled safely from day one
@@ -49,7 +49,7 @@ cp -r ~/product-builder-starter/skills/linear ~/.claude/skills/
 cp -r ~/product-builder-starter/skills/docker ~/.claude/skills/
 ```
 
-After copying, skills activate automatically based on trigger phrases in your next Claude Code session.
+After copying, skills activate automatically based on trigger phrases in your next agentic framework session.
 
 ### First-Time CLAUDE.md Setup
 
@@ -156,9 +156,9 @@ Skills ranked by workflow centrality — start from the top when getting started
 
 ## Prerequisites
 
-### 1. Claude Code
+### 1. Agentic Framework
 
-Install Claude Code and configure it for your project. Add your project's CLAUDE.md with Docker commands, test patterns, and project structure.
+Install an agentic framework (e.g. Claude Code) and configure it for your project. Add your project's CLAUDE.md with Docker commands, test patterns, and project structure.
 
 ### 2. Linear MCP (for `linear` skill)
 
@@ -168,7 +168,7 @@ The linear skill requires the Linear MCP server. Run this command in your termin
 claude mcp add --transport http linear-server https://mcp.linear.app/mcp
 ```
 
-Then open a Claude Code session and run `/mcp` to complete authentication with your Linear account.
+Then open a new session and run `/mcp` to complete authentication with your Linear account.
 
 > See the [Linear MCP docs](https://linear.app/docs/mcp) for the latest setup instructions.
 
