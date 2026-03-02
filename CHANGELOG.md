@@ -67,9 +67,9 @@ Break Linear projects into waves with token estimates and agent assignments.
 
 #### `hive-workers-skill` v1.0.0
 
-Execute waves using claude-flow multi-agent swarms.
+Execute waves using ruflo multi-agent swarms.
 
-- **v1.0.0** (2026-03): Initial public release — 11-step execution workflow, claude-flow MCP integration, governance audit, context persistence
+- **v1.0.0** (2026-03): Initial public release — 11-step execution workflow, ruflo MCP integration, governance audit, context persistence
 
 ---
 

@@ -223,7 +223,7 @@ Configure Claude Code hooks to automate session management:
         "hooks": [
           {
             "type": "command",
-            "command": "npx claude-flow hook session-end --export-metrics --generate-summary"
+            "command": "npx ruflo hook session-end --export-metrics --generate-summary"
           }
         ]
       }

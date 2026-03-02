@@ -74,7 +74,7 @@ Before wave execution, verify the environment. See **[preflight.md](preflight.md
 
 | Check | Command | Expected |
 |-------|---------|----------|
-| MCP Server | `grep claude-flow .mcp.json` | Found |
+| MCP Server | `grep ruflo .mcp.json` | Found |
 | Docker | `docker ps \| grep <project-name>` | Running |
 | Linear | `linear issues list --limit 1` | Returns issues |
 
@@ -234,7 +234,7 @@ After planning, execute waves. See **[execution.md](execution.md)** for full det
 
 ```bash
 # Execute Wave 1
-./claude-flow swarm "Execute Wave 1" \
+npx ruflo swarm "Execute Wave 1" \
   --config .claude/hive-mind/{project}-wave-1.yaml \
   --strategy development \
   --mode hierarchical

@@ -70,7 +70,7 @@ This skill spawns a general-purpose subagent that coordinates stages via nested 
 | [wave-planner](../wave-planner/SKILL.md) | Stage 1b (feature): Generate wave plan + hive configs |
 | [plan-review-skill](../plan-review-skill/SKILL.md) | Stage 2: VP review of plan (both paths) |
 | [linear](../linear/SKILL.md) | Stage 3: Create Linear project + issues |
-| [hive-workers-skill](../hive-workers-skill/SKILL.md) | Stage 4: Execute waves via claude-flow swarm |
+| [hive-workers-skill](../hive-workers-skill/SKILL.md) | Stage 4: Execute waves via ruflo swarm |
 
 ## Infra Trigger Criteria (ADR-109)
 

@@ -213,7 +213,7 @@ Sub-documents use kebab-case with domain-based names.
 | `tooling-guide.md` | Development tools and integrations |
 | `troubleshooting.md` | Diagnostic procedures and fixes |
 | `git-crypt-guide.md` | Git-crypt setup and workflows |
-| `claude-flow-guide.md` | Claude-Flow orchestration and agents |
+| `ruflo-guide.md` | Ruflo orchestration and agents |
 | `testing-guide.md` | Test strategy and execution |
 | `architecture-reference.md` | Architecture documentation index |
 

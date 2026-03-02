@@ -88,11 +88,11 @@ git worktree add ../worktrees/category-expansion -b feature/category-expansion
 cd ../worktrees/category-expansion
 
 # Execute waves sequentially in the same worktree
-./claude-flow swarm --config .claude/hive-mind/category-wave-1.yaml
+npx ruflo swarm --config .claude/hive-mind/category-wave-1.yaml
 # Wait for completion...
-./claude-flow swarm --config .claude/hive-mind/category-wave-2.yaml
+npx ruflo swarm --config .claude/hive-mind/category-wave-2.yaml
 # Wait for completion...
-./claude-flow swarm --config .claude/hive-mind/category-wave-3.yaml
+npx ruflo swarm --config .claude/hive-mind/category-wave-3.yaml
 
 # Single PR for all waves
 gh pr create --title "feat: Category system expansion (SMI-1675)"
@@ -130,9 +130,9 @@ Wave 1 → Wave 2 → Wave 3 (each depends on previous)
 ## Commands
 ```bash
 # Execute each wave in sequence
-./claude-flow swarm --config .claude/hive-mind/category-wave-1.yaml
-./claude-flow swarm --config .claude/hive-mind/category-wave-2.yaml
-./claude-flow swarm --config .claude/hive-mind/category-wave-3.yaml
+npx ruflo swarm --config .claude/hive-mind/category-wave-1.yaml
+npx ruflo swarm --config .claude/hive-mind/category-wave-2.yaml
+npx ruflo swarm --config .claude/hive-mind/category-wave-3.yaml
 ```
 
 ## Completion
@@ -167,13 +167,13 @@ git worktree add ../worktrees/docs-refresh -b feature/docs-refresh
 
 # Run in parallel (separate terminal sessions)
 # Terminal 1:
-cd ../worktrees/dark-mode && ./claude-flow swarm --config ...
+cd ../worktrees/dark-mode && npx ruflo swarm --config ...
 
 # Terminal 2:
-cd ../worktrees/rate-limiting && ./claude-flow swarm --config ...
+cd ../worktrees/rate-limiting && npx ruflo swarm --config ...
 
 # Terminal 3:
-cd ../worktrees/docs-refresh && ./claude-flow swarm --config ...
+cd ../worktrees/docs-refresh && npx ruflo swarm --config ...
 
 # Merge PRs in any order (no conflicts expected)
 ```

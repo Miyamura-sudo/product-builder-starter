@@ -4,10 +4,10 @@
 
 ```javascript
 // Initialize swarm
-mcp__claude-flow__swarm_init({ topology: "hierarchical", maxAgents: 6 })
+mcp__ruflo__swarm_init({ topology: "hierarchical", maxAgents: 6 })
 
 // Destroy swarm
-mcp__claude-flow__swarm_destroy({ swarmId: "swarm_xxx" })
+mcp__ruflo__swarm_destroy({ swarmId: "swarm_xxx" })
 ```
 
 ## TodoWrite Pattern

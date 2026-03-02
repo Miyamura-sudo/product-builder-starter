@@ -56,29 +56,29 @@ Task({
 
 ## Prerequisites (REQUIRED)
 
-### 1. Claude-Flow MCP Server Must Be Configured
+### 1. Ruflo MCP Server Must Be Configured
 
-The hive mind uses MCP tools (`mcp__claude-flow__*`) to spawn and coordinate agents.
+The hive mind uses MCP tools (`mcp__ruflo__*`) to spawn and coordinate agents.
 
 **Check if configured:**
 ```bash
-claude mcp list | grep claude-flow
+claude mcp list | grep ruflo
 ```
 
 **If not configured, add it:**
 
 Option A - Via CLI:
 ```bash
-claude mcp add claude-flow -- npx claude-flow@alpha mcp start
+claude mcp add ruflo -- npx ruflo@v3alpha mcp start
 ```
 
 Option B - Via .mcp.json (recommended for projects):
 ```json
 {
   "mcpServers": {
-    "claude-flow": {
+    "ruflo": {
       "command": "npx",
-      "args": ["claude-flow@alpha", "mcp", "start"],
+      "args": ["ruflo@v3alpha", "mcp", "start"],
       "env": {
         "CLAUDE_FLOW_LOG_LEVEL": "info",
         "CLAUDE_FLOW_MEMORY_BACKEND": "sqlite"
@@ -89,11 +89,11 @@ Option B - Via .mcp.json (recommended for projects):
 ```
 
 **Available MCP tools:**
-- `mcp__claude-flow__swarm_init` - Initialize swarm topology
-- `mcp__claude-flow__agent_spawn` - Spawn specialist agents
-- `mcp__claude-flow__task_orchestrate` - Coordinate tasks
-- `mcp__claude-flow__memory_usage` - Shared memory operations
-- `mcp__claude-flow__swarm_destroy` - Cleanup swarm
+- `mcp__ruflo__swarm_init` - Initialize swarm topology
+- `mcp__ruflo__agent_spawn` - Spawn specialist agents
+- `mcp__ruflo__task_orchestrate` - Coordinate tasks
+- `mcp__ruflo__memory_usage` - Shared memory operations
+- `mcp__ruflo__swarm_destroy` - Cleanup swarm
 
 ### 2. Available Specialist Agents
 
@@ -178,7 +178,7 @@ Document findings before proceeding:
 ## Phase 1: Initialize Hive Mind
 
 ```javascript
-mcp__claude-flow__swarm_init({
+mcp__ruflo__swarm_init({
   topology: "hierarchical",  // or "mesh", "ring", "star"
   maxAgents: 6,
   strategy: "balanced"
@@ -402,7 +402,7 @@ Generate a brief summary before cleanup:
 ## Phase 8: Cleanup
 
 ```javascript
-mcp__claude-flow__swarm_destroy({ swarmId: "swarm_xxx" })
+mcp__ruflo__swarm_destroy({ swarmId: "swarm_xxx" })
 // Mark issues done via Linear MCP or CLI
 ```
 
@@ -440,5 +440,5 @@ mcp__claude-flow__swarm_destroy({ swarmId: "swarm_xxx" })
 
 ## References
 
-- [claude-flow Documentation](https://github.com/ruvnet/claude-flow)
+- [Ruflo Documentation](https://github.com/ruvnet/ruflo)
 - [Linear API](https://developers.linear.app/docs/graphql/working-with-the-graphql-api)

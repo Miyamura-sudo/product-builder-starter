@@ -26,7 +26,7 @@ composes:
 
 # Hive Workers Skill
 
-Orchestrates complex task execution using claude-flow hive mind with automatic code review and documentation updates.
+Orchestrates complex task execution using ruflo hive mind with automatic code review and documentation updates.
 
 ## Quick Start
 
@@ -71,7 +71,7 @@ When triggered, **immediately**:
 
 ## Prerequisites
 
-- claude-flow configured (`claude mcp add claude-flow -- npx claude-flow@alpha mcp start`)
+- ruflo configured (`claude mcp add ruflo -- npx ruflo@v3alpha mcp start`)
 - Linear MCP (optional, for issue tracking)
 
 For full execution details, see [agent-prompt.md](agent-prompt.md).
@@ -81,7 +81,7 @@ For full execution details, see [agent-prompt.md](agent-prompt.md).
 ### v1.0.0 (2026-03)
 - Initial public release
 - 11-step hive mind execution workflow
-- claude-flow MCP integration (`swarm_init`, `agent_spawn`, `task_orchestrate`, `swarm_destroy`)
+- ruflo MCP integration (`swarm_init`, `agent_spawn`, `task_orchestrate`, `swarm_destroy`)
 - Automatic governance audit after execution
 - Context persistence across sessions (`context-persistence.md`)
 - Workflow templates for common task types

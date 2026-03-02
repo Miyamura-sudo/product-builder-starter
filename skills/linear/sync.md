@@ -109,13 +109,13 @@ For swarm coordination, store sync state in AgentDB:
 
 ```bash
 # Store pending sync context
-npx claude-flow memory store "linear:pending_sync" '["ENG-432","ENG-433"]' --namespace current-phase
+npx ruflo memory store "linear:pending_sync" '["ENG-432","ENG-433"]' --namespace current-phase
 
 # Agent reads and processes
-npx claude-flow memory get "linear:pending_sync" --namespace current-phase
+npx ruflo memory get "linear:pending_sync" --namespace current-phase
 
 # Store results for verification
-npx claude-flow memory store "linear:sync_results" '{"done":16,"failed":0}' --namespace current-phase
+npx ruflo memory store "linear:sync_results" '{"done":16,"failed":0}' --namespace current-phase
 ```
 
 ### Swarm Sync Pattern

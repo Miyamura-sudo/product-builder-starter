@@ -183,13 +183,13 @@ export PATH="$HOME/.varlock/bin:$PATH"
 
 Docker Desktop or OrbStack. The docker skill enforces all npm/node operations run inside containers — keeps your host machine clean and ensures consistent environments.
 
-### 5. Claude-Flow MCP (for `hive-workers-skill`)
+### 5. Ruflo MCP (for `hive-workers-skill`)
 
 ```bash
-claude mcp add claude-flow -- npx claude-flow@alpha mcp start
+claude mcp add ruflo -- npx ruflo@v3alpha mcp start
 ```
 
-Required for multi-agent hive mind orchestration. The hive-workers-skill uses `mcp__claude-flow__*` tools to spawn and coordinate parallel agents.
+Required for multi-agent hive mind orchestration. The hive-workers-skill uses `mcp__ruflo__*` tools to spawn and coordinate parallel agents.
 
 ---
 
