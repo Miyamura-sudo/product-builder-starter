@@ -78,19 +78,19 @@ Claude will audit the file, extract sections that exceed their purpose, and link
 
 ## Skills
 
-| Skill | What it does | Trigger phrase | Install |
-|-------|-------------|----------------|---------|
-| **linear** | Create, update, and query Linear issues; bulk syncs; project lifecycle management | "create issue", "update Linear", "sync to Linear" | `cp -r skills/linear ~/.claude/skills/` |
-| **governance** | Code reviews, retrospectives, standards enforcement; zero-deferral policy (fixes everything now) | "/review", "code review", "run a retro", "/retro" | `cp -r skills/governance ~/.claude/skills/` |
-| **launchpad** | End-to-end orchestrator: chains wave-planner → plan-review → linear → execution in one workflow | "/launchpad", "plan and execute", "run the initiative" | `cp -r skills/launchpad ~/.claude/skills/` |
-| **wave-planner** | Break Linear issues into execution-ready waves with risk ordering, agent assignments, and TDD workflow | "/wave-planner", "/plan", "break this down into waves" | `cp -r skills/wave-planner ~/.claude/skills/` |
-| **plan-review-skill** | VP Product + VP Engineering + VP Design review any plan; surfaces blockers before you write a line | "/plan-review-skill", "review this plan", "VP review" | `cp -r skills/plan-review-skill ~/.claude/skills/` |
-| **varlock** | Secure secret management — never expose API keys in terminal output or Claude's context | "environment variables", "secrets", ".env", "API key" | `cp -r skills/varlock ~/.claude/skills/` |
-| **docker** | Docker-first development enforcement; all npm/node commands run in containers | "npm install", "run the build", "start the server" | `cp -r skills/docker ~/.claude/skills/` |
-| **claude-md-optimizer** | Shrink oversized CLAUDE.md files using progressive disclosure (extracts to sub-docs) | "optimize CLAUDE.md", "CLAUDE.md too long", "reduce CLAUDE.md size" | `cp -r skills/claude-md-optimizer ~/.claude/skills/` |
-| **hive-workers-skill** | Execute tasks and epics with parallel hive mind agents; automatic code review, governance gate, sprint report | "/hive-workers", "execute with hive mind", "orchestrate these tasks" | `cp -r skills/hive-workers-skill ~/.claude/skills/` |
-| **worktree-manager** | Parallel feature branches via git worktrees; wave-aware conflict prevention | "/worktree", "create worktree", "parallel development" | `cp -r skills/worktree-manager ~/.claude/skills/` |
-| **session-cleanup** | End-of-session housekeeping: branch audit, worktree removal, main sync | "/session-cleanup", "clean up branches", "end of session" | `cp -r skills/session-cleanup ~/.claude/skills/` |
+| Skill | Version | What it does | Trigger phrase | Install |
+|-------|---------|-------------|----------------|---------|
+| **linear** | 2.2.3 | Create, update, and query Linear issues; bulk syncs; project lifecycle management | "create issue", "update Linear", "sync to Linear" | `cp -r skills/linear ~/.claude/skills/` |
+| **governance** | 1.4.0 | Code reviews, retrospectives, standards enforcement; zero-deferral policy (fixes everything now) | "/review", "code review", "run a retro", "/retro" | `cp -r skills/governance ~/.claude/skills/` |
+| **launchpad** | 1.2.0 | End-to-end orchestrator: chains wave-planner → plan-review → linear → execution in one workflow | "/launchpad", "plan and execute", "run the initiative" | `cp -r skills/launchpad ~/.claude/skills/` |
+| **wave-planner** | 2.0.0 | Break Linear issues into execution-ready waves with risk ordering, agent assignments, and TDD workflow | "/wave-planner", "/plan", "break this down into waves" | `cp -r skills/wave-planner ~/.claude/skills/` |
+| **plan-review-skill** | 2.0.0 | VP Product + VP Engineering + VP Design review any plan; surfaces blockers before you write a line | "/plan-review-skill", "review this plan", "VP review" | `cp -r skills/plan-review-skill ~/.claude/skills/` |
+| **varlock** | 1.0.0 | Secure secret management — never expose API keys in terminal output or Claude's context | "environment variables", "secrets", ".env", "API key" | `cp -r skills/varlock ~/.claude/skills/` |
+| **docker** | 1.1.0 | Docker-first development enforcement; all npm/node commands run in containers | "npm install", "run the build", "start the server" | `cp -r skills/docker ~/.claude/skills/` |
+| **claude-md-optimizer** | 1.1.1 | Shrink oversized CLAUDE.md files using progressive disclosure (extracts to sub-docs) | "optimize CLAUDE.md", "CLAUDE.md too long", "reduce CLAUDE.md size" | `cp -r skills/claude-md-optimizer ~/.claude/skills/` |
+| **hive-workers-skill** | 1.0.0 | Execute tasks and epics with parallel hive mind agents; automatic code review, governance gate, sprint report | "/hive-workers", "execute with hive mind", "orchestrate these tasks" | `cp -r skills/hive-workers-skill ~/.claude/skills/` |
+| **worktree-manager** | 2.0.0 | Parallel feature branches via git worktrees; wave-aware conflict prevention | "/worktree", "create worktree", "parallel development" | `cp -r skills/worktree-manager ~/.claude/skills/` |
+| **session-cleanup** | 1.2.0 | End-of-session housekeeping: branch audit, worktree removal, main sync | "/session-cleanup", "clean up branches", "end of session" | `cp -r skills/session-cleanup ~/.claude/skills/` |
 
 ---
 
